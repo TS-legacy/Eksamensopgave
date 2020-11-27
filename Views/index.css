@@ -1,0 +1,22 @@
+.header {
+    color: red;
+    text-align: center;
+    size: large;
+}
+
+.sign_Up_Form {
+    position: fixed;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.login_Form {
+    padding: 10%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.error {
+    color: black;
+    bottom: 0;
+}
