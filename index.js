@@ -31,6 +31,21 @@
     e.preventDefault();
   }
 
+  /**Et get request sendes som forbinder serveren med siden. 
+   * Efter der er kørt node.server.js i conoslen så kan localhost skrives i postman eller føges vi linket*/
+
+   let apiButton = document.getElementById("apiButton");
+    apiButton.addEventListener("click", function(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Typical action to be performed when the document is ready:
+                alert(xhttp.responseText);
+            }
+        };
+        xhttp.open("GET", "http://localhost:3000", true);
+        xhttp.send();
+    });
 
   function logInButton() {
 
@@ -42,10 +57,8 @@
 
   if (savedEmail == logInEmail && savedPassword == logInPassword) {
       
-    window.location.href = "../html/explore.html";
-  } else {
-    document.getElementById("logInError").innerHTML = "Invalid <br/>";
-  }
+    window.location.href = "../Views/swipe.html"; //link til swipe siden når bruger er logget ind
+  } 
 }
 
 
@@ -58,21 +71,8 @@ function deleteUser(){
         localStorage.removeItem("age")
         localStorage.removeItem("password")
 
-        window.location.href = "../html/index.html";
+        window.location.href = "../Views/login.html"; //Link til login siden når bruger e rlogget ud
 
 
     
 }
-
-let apiButton = document.getElementById("apiButton");
-    apiButton.addEventListener("click", function(){
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                // Typical action to be performed when the document is ready:
-                alert(xhttp.responseText);
-            }
-        };
-        xhttp.open("GET", "http://localhost:3000", true);
-        xhttp.send();
-    });
