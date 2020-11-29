@@ -3,67 +3,71 @@
 I følge opgavebeskrivelsen skal en bruger både kunne logge ind på en allerede eksisterende bruger og forblive logget ind. 
 En bruger skal også kunne oprette, slette og opdatere sin profil -->
 
-<!doctype html> 
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"> <!-- to display the HTML page correct-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Log in page </title>
-        <link rel="stylesheet" href="./index.css" /> <!-- Link to CSS stylesheet-->
-        <script src="../index.js"> </script> <!--link to js logik page in Modules acording to MVC-->
-    </head>
-
-    <body>
-        <header class="header"> 
-           <!-- <nav class="navigation"> Using the nav tag to create a navigation menu. see documentation: https://www.w3schools.com/tags/tag_nav.asp --> 
-               <!--- <ul class="navigation_links"> </ul>  ul tag for creating an unordeded list-->
-                    <h1> Tinder -clone</h1>
-            </nav>
-        </header>
-
-
-    <div class="sign_Up_Form"> <!-- Creating a div tag to make a section in the document which could be styled if wanted to. But that is not necessary-->
-     <h2>Sign up to the new tinder </h2>
-     <br>
-
-        <!-- I create a sign up form where a user can put his/hers information. See documentation https://www.w3schools.com/howto/howto_css_signup_form.asp-->
-        
-        <form>
-            <input type="text" id="firstname" placeholder="Firstname">
-            <input type="email" id="email" placeholder="Email">
-            <input type="password" id="password" placeholder="Password">
-            <input type="button" value="Submit" id="submit">
-        </form>
-        <div id="message"></div>
-
-        <div id="Callback">
-            <input type="button" value="Contact API" id="apiButton">
-        </div>
-
-
-        <!-- I create a login form so a user can login to his/hers page-->
-    </div>
-    <div class= "login_Form">
-        <h2>Login to your account here. </h2>
-        
-                    <br/>
-                    <input type="text" id="logInEmail" placeholder="Email address"> 
-                    <input type="password" id="logInPassword" placeholder="Your password">      
-        
-        <button 
-        onclick="logInBtn()">Log in</button>
-    </div>
-<br/>
-<br/>
-<br/>
-
-
-    <div class="error" id="messageFullname"></div>
-    <div class="error" id="messageEmail"></div>
-    <div class="error" id="messagePassword"></div>
-    <div class="error" id="messageAge"></div>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinder-clone</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="../Controller/index.js" ></script>
+    
+</head>
+<body>
   
+      <div class = "header">         
+        <h1> Tinder-clone  </h1>
+
+      </div>
+      <br/>
+
+      <div class="signup__Form">
+        <h2>Sign up:</h2>
+        
+    <br/>
+        <input type="text" id="fullName" placeholder="Your name"/>
+    <br/>
+    <br/>
+        <input type="text" id="email" value="" placeholder="Email"/>
+    <br/>
+    <br/>
+        <input type="password" id="signUpPassword" placeholder="Password"/>
+    <br/>
+    <br>
+        <input type="age" id= "age" placeholder="Age"/>
+    <br/>
+       
+        <button type="Sign up" onclick="createAccBtn()">Sign up</button>
+      </div>
+        
+<!--__________________________________________________________________________________________-->
+      
+
+        <div class= "login__Form">
+            
+    <h2>Log in here:</h2>
+         
+    <br/>
+        <input type="text" id="logInEmail" placeholder="Email address"> 
+    <br/>
+    <br/>
+        <input type="password" id="logInPassword" placeholder="Your password">
+    <br/>
+    <br/>
+            
+        <button onclick="logInBtn()">Log in</button>
+        </div>
+   
+
+<p class= error id="validationTextName" ></p>
+<p class= error id="validationTextEmail" ></p>
+<p class=error id="passworderror" ></p>            
+<p class= error id= "validationTextAge" ></p>
+
+<p class= error id="logInError" ></p>
+
+   
+    
     </body>
 
 </html>

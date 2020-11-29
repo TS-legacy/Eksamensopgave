@@ -4,15 +4,15 @@
     size: large;
 }
 
-.sign_Up_Form {
-    position: fixed;
+.signup__Form {
+    position: left;
     width: 90%;
-    display: flex;
     justify-content: space-evenly;
 }
-.login_Form {
-    padding: 10%;
-    display: flex;
+.login__Form {
+    padding-right: 0%;
+    position: center;
+    width: 90%;
     justify-content: space-evenly;
 }
 
