@@ -8,77 +8,71 @@
 
 
 
-function createAccBtn() {
-// Laver JS variabler og henter values fra html
 
-const name = document.getElementById("fullName").value;
-const email = document.getElementById("email").value;
-
-const signUpPassword = document.getElementById("signUpPassword").value;
-const age = document.getElementById("age").value;
-const form_valid = true;
-
-
-localStorage.setItem("fullName", name);
-localStorage.setItem("email", email);
-localStorage.setItem("password", signUpPassword);
-localStorage.setItem("age", age);
-
-
-fetch("http://localhost:3001/users", {
-  method: "POST",
-  body: JSON.stringify({
-    name: name,
-    email: email
-  }),
-  headers: {
-    'Content-Type': 'application/json',
-    authorization: "Bearer " + jwt
-  }
-}).then((response) => {
-  if (form_valid) {
-    window.location.href = "../Views/swipe.html";
-  } else {
-    return false;
-  }
-})
-
-
-e.preventDefault();
-}
-
-
-
-
-function logInBtn() {
-
-  var savedEmail = localStorage.getItem("email");
-  var savedPassword = localStorage.getItem("password");
-
-const logInEmail = document.getElementById("logInEmail").value;
-const logInPassword = document.getElementById("logInPassword").value;
-
-if (savedEmail == logInEmail && savedPassword == logInPassword) {
+  function createAccBtn() {
     
-  window.location.href = "../Views/swipe.html";
-} else {
-  document.getElementById("logInError").innerHTML = "Invalid <br/>";
-}
+    const fname = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+  
+    const Password = document.getElementById("signUpPassword").value;
+    const age = document.getElementById("age").value;
+    const form_valid = true;
+  
+
+  
+    localStorage.setItem("fullName", fname);
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", Password);
+    localStorage.setItem("age", age);
+  
+  
+  
+    e.preventDefault();
+  }
+
+  /**Et get request sendes som forbinder serveren med siden. 
+   * Efter der er kørt node.server.js i conoslen så kan localhost skrives i postman eller føges vi linket*/
+
+   let apiButton = document.getElementById("signUp");
+    apiButton.addEventListener("click", function(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // Typical action to be performed when the document is ready:
+                alert(xhttp.responseText);
+            }
+        };
+        xhttp.open("GET", "http://localhost:3000", true);
+        xhttp.send();
+    });
+
+//A function is made that checks if the mail and password that is put in is equal to the one from local storage
+  function logInBtn() {
+
+    var savedEmail = localStorage.getItem("email");
+    var savedPassword = localStorage.getItem("password");
+
+  const logInEmail = document.getElementById("logInEmail").value;
+  const logInPassword = document.getElementById("logInPassword").value;
+
+  if (savedEmail == logInEmail && savedPassword == logInPassword) {
+      
+    window.location.href = "../Views/swipe.html"; //link til swipe siden når bruger er logget ind
+  } 
 }
 
 
 function deleteUser(){
 
-
   
-      localStorage.removeItem("fullName")
-      localStorage.removeItem("email")
-      localStorage.removeItem("age")
-      localStorage.removeItem("password")
+    
+        localStorage.removeItem("fullName")
+        localStorage.removeItem("email")
+        localStorage.removeItem("age")
+        localStorage.removeItem("password")
 
-      window.location.href = "../Views/login.html";
+        window.location.href = "../Views/login.html"; //Link til login siden når bruger e rlogget ud
 
 
-  
+    
 }
-
