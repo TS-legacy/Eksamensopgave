@@ -1,0 +1,23 @@
+.navigation {
+    text-align: center;
+    display: flex;
+}
+
+.myProfile__link {
+    margin-left: 10px;
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.logOut__link {
+    margin-left: 1260px;
+    background-color: #29b3cd;
+    padding: 15px;
+    border-radius: 20px;
+    color: white;
+}
+h1 {
+    text-align: center;
+    color: red;
+}
