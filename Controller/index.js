@@ -19,7 +19,7 @@
     const form_valid = true;
   
 
-  
+//documentation : https://www.w3schools.com/jsref/met_storage_setitem.asp   
     localStorage.setItem("fullName", fname);
     localStorage.setItem("email", email);
     localStorage.setItem("password", Password);
@@ -27,7 +27,8 @@
   
   
   
-    e.preventDefault();
+    e.preventDefault(); //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+
   }
 
   /**Et get request sendes som forbinder serveren med siden. 
@@ -48,7 +49,7 @@
 
 //A function is made that checks if the mail and password that is put in is equal to the one from local storage
   function logInBtn() {
-
+//documentation for getItem: https://www.w3schools.com/jsref/met_storage_getitem.asp 
     var savedEmail = localStorage.getItem("email");
     var savedPassword = localStorage.getItem("password");
 
@@ -62,6 +63,7 @@
 }
 
 
+//Function that deltes the users information fgrom local storage: See documentation - https://www.w3schools.com/jsref/met_storage_removeitem.asp 
 function deleteUser(){
 
   
