@@ -16,9 +16,18 @@
   <nav class="navigation">
     <a class="myProfile__link" href="./myProfile.html"> My Profile </a>
     <a class="logOut__link" href="./login.html"> Log out </a>
-
   </nav>
 </header>
   
+<!-- Making the users be able to like anhd dislike. The match will be added to the console if like-->
+<div class="Users">
+        <img id="Selena" class="userPhoto" src="https://www.biography.com/.image/t_share/MTE5NDg0MDU0NzExMjA3NDM5/selena-189149-1-402.jpg">
+        <button onclick="likeBtn()" class="likeBtn">Like</button>
+        <button onclick="dislikeBtn()" class="dislikeBtn">Dislike</button>
+        <button type="button" onclick="profileInfo()">About</button>
+</div>
+
+<p id="profileInfo"></p>
+
   </body> 
 </html>

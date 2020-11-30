@@ -21,3 +21,26 @@ h1 {
     text-align: center;
     color: red;
 }
+
+.Users {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .Users img {
+    width: 90%;
+    height: auto;
+  }
+  
+.likeBtn {
+    color: green;
+}
+
+.dislikeBtn {
+    color: red;
+}
+
+#profileInfo {
+    color: blue;
+}
