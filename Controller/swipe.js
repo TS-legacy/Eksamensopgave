@@ -17,7 +17,7 @@ function dislikeBtn() {
 }
 
 
-
+//printing the user information on the page
 function profileInfo() {
 
 document.getElementById("profileInfo").innerHTML = "Hi! I'm Selena. I'm 30 years old and love to drink wine";
