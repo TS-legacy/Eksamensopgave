@@ -24,8 +24,8 @@
 
   }
 
-  /**Et get request sendes som forbinder serveren med siden. 
-   * Efter der er kørt node.server.js i consolen så kan localhost skrives i postman eller føges vi linket*/
+  /**Et get request sendes som forbinder serveren med siden når bruger opretter sig. 
+   * Efter der er kørt node.server.js i consolen så kan localhost:3000 skrives i postman eller føges vi linket*/
   document.addEventListener("DOMContentLoaded", function() {
 
    let apiButton = document.getElementById("signUp");
