@@ -38,5 +38,28 @@ h1 {
     position: absolute;
     top: 200px;
     margin-left: 100px;
-    
+    justify-content: space-between;
+}
+
+.profile__text {
+    text-align: center;
+    top: 200px;
+}
+
+.profile__img {
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.update__form {
+margin-left: 100px;
+}
+
+#deleteBtn {
+    background-color: red;
+    color: white;
+    margin-left: 85%;
 }

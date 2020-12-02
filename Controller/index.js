@@ -3,20 +3,13 @@
  */
 
 
-// Some of code is taken from Assignment 4 to display an error when criteria is not fulfilled
-//Create a function that runs through the password and check if its correct
-
-
-
 
   function createAccBtn() {
     
     const fname = document.getElementById("fullName").value;
     const email = document.getElementById("email").value;
-  
     const Password = document.getElementById("signUpPassword").value;
     const age = document.getElementById("age").value;
-    const form_valid = true;
   
 
 //documentation : https://www.w3schools.com/jsref/met_storage_setitem.asp   
@@ -32,7 +25,7 @@
   }
 
   /**Et get request sendes som forbinder serveren med siden. 
-   * Efter der er kørt node.server.js i conoslen så kan localhost skrives i postman eller føges vi linket*/
+   * Efter der er kørt node.server.js i consolen så kan localhost skrives i postman eller føges vi linket*/
 
    let apiButton = document.getElementById("signUp");
     apiButton.addEventListener("click", function(){
@@ -63,18 +56,4 @@
 }
 
 
-//Function that deltes the users information fgrom local storage: See documentation - https://www.w3schools.com/jsref/met_storage_removeitem.asp 
-function deleteUser(){
 
-  
-    
-        localStorage.removeItem("fullName")
-        localStorage.removeItem("email")
-        localStorage.removeItem("age")
-        localStorage.removeItem("password")
-
-        window.location.href = "../Views/login.html"; //Link til login siden når bruger e rlogget ud
-
-
-    
-}

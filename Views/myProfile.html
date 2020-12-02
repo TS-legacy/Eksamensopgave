@@ -22,13 +22,72 @@
 <div class="myInfo">
 <h2>My information</h2>
 
+ <!-- MAking the id where i will print the information from local Storage-->
+
+<p id="name"> </p>
+<p id="email"></p>
+<p id="password"></p>
+<p id="age"></p>
+<p id="error"></p>
+
+<!-- Printing the user values from local storage. (The users information)-->
+<!--// https://www.w3schools.com/jsref/prop_win_localstorage.asp - documentation -->
+<script>
+  document.getElementById("name").innerHTML = "Fullname: " + localStorage.getItem("fullName");
+  document.getElementById("email").innerHTML = "Email: " + localStorage.getItem("email");
+  document.getElementById("password").innerHTML = "Password: " + localStorage.getItem("password");
+  document.getElementById("age").innerHTML = "Age: " + localStorage.getItem("age");
+</script>
 </div>
+
+
+<!-- Styling the img in the center of the page -->
+<div class="profile__imgDiv">
+
+<h3 class="profile__text"> My profile picture</h3>
+<img class="profile__img" src="https://cdn.vox-cdn.com/thumbor/4QtOwnOxCdwESvt1-CpQSTZvHHA=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19932738/1206292068.jpg.jpg" />
+
+</div>
+
+<!-- Making a form so user can update informations-->
+<div class="update__form">
+  <h3> Update your information here:</h3>
+  <!-- Making the buttons where user can give inputs-->
+<br>
+<input type="text" id="updateFname" placeholder="Name" />
+<br>
+<input type="text" id="updateEmail" placeholder="Email" />
+<br>
+<input type="text" id="updatePassword" placeholder="Password" />
+<br>
+<input type="text" id="updateAge" placeholder="age" />
+<br/>
+<br/>
+<button id="update" type="submit" onclick="updateInfo()">Update</button>
+<button id="reload" type="button" onclick="reload()">See changes</button>
+</div>
+
+<!------------------------------------------------------------------------------------------------------------------->
 
 <!--Making the division in the profile page where the information about my matches are-->
 <div class="myMatches">
 <h2> My matches </h2>
+<p id="matches"></p>
+<!-- Printing the match values from local storage. (The users information)-->
+<script>
+  document.getElementById("matches").innerHTML = "matches: " + localStorage.getItem("Selena")
+ 
+</script>
+</div>
+
+
+<!-- Delete my user division via a button and logging the person out -->
+<div class="delete__User">
+  <button id="deleteBtn" type="submit" onclick="deleteUser()">Delete My profile</button>
+
 
 </div>
+
 
 
   </body>
