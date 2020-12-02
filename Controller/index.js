@@ -26,6 +26,7 @@
 
   /**Et get request sendes som forbinder serveren med siden. 
    * Efter der er kørt node.server.js i consolen så kan localhost skrives i postman eller føges vi linket*/
+  document.addEventListener("DOMContentLoaded", function() {
 
    let apiButton = document.getElementById("signUp");
     apiButton.addEventListener("click", function(){
@@ -39,6 +40,7 @@
         xhttp.open("GET", "http://localhost:3000", true);
         xhttp.send();
     });
+  });
 
 //A function is made that checks if the mail and password that is put in is equal to the one from local storage
   function logInBtn() {
