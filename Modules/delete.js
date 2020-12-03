@@ -1,6 +1,6 @@
-//Server til når bruger ændre sin data
+//Server til når bruger sletter sin data
 
-//Server code når user ændre sin data___________________________________________________
+//Server code når user sletter sin data___________________________________________________
 
 var express = require('express'),
   app = express(),

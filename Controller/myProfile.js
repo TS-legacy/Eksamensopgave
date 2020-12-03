@@ -42,7 +42,7 @@ function deleteUser(){
 
 
   /**Et get request sendes som forbinder serveren med siden når bruger opretter sig. 
-   * Efter der er kørt node.server.js i consolen så kan localhost:3000 skrives i postman eller føges vi linket*/
+   * Efter der er kørt node.server.js i consolen så kan localhost:3001 skrives i postman eller føges vi linket*/
   document.addEventListener("DOMContentLoaded", function() {
 
     let apiButton = document.getElementById("update");
@@ -61,7 +61,7 @@ function deleteUser(){
 
 
 /**Et get request sendes som forbinder serveren med siden når bruger opretter sig. 
-   * Efter der er kørt node.server.js i consolen så kan localhost:3000 skrives i postman eller føges vi linket*/
+   * Efter der er kørt node.server.js i consolen så kan localhost:3002 skrives i postman eller føges vi linket*/
   document.addEventListener("DOMContentLoaded", function() {
 
     let apiButton = document.getElementById("deleteBtn");
