@@ -42,7 +42,7 @@ function deleteUser(){
 
 
   /**Et get request sendes som forbinder serveren med siden når bruger opretter sig. 
-   * Efter der er kørt node.server.js i consolen så kan localhost:3000 skrives i postman eller føges vi linket*/
+   * Efter der er kørt node.server.js i consolen så kan localhost:3001 skrives i postman eller føges vi linket*/
   document.addEventListener("DOMContentLoaded", function() {
 
     let apiButton = document.getElementById("update");
@@ -55,6 +55,25 @@ function deleteUser(){
              }
          };
          xhttp.open("GET", "http://localhost:3001", true);
+         xhttp.send();
+     });
+   });
+
+
+/**Et get request sendes som forbinder serveren med siden når bruger opretter sig. 
+   * Efter der er kørt node.server.js i consolen så kan localhost:3002 skrives i postman eller føges vi linket*/
+  document.addEventListener("DOMContentLoaded", function() {
+
+    let apiButton = document.getElementById("deleteBtn");
+     apiButton.addEventListener("click", function(){
+         var xhttp = new XMLHttpRequest();
+         xhttp.onreadystatechange = function() {
+             if (this.readyState == 4 && this.status == 200) {
+                 // Typical action to be performed when the document is ready:
+                 alert(xhttp.responseText);
+             }
+         };
+         xhttp.open("GET", "http://localhost:3002", true);
          xhttp.send();
      });
    });
