@@ -2,15 +2,19 @@
  * I use getElementById instead of querySelector: https://careerkarma.com/blog/javascript-queryselector-vs-getelementbyid/
  */
 
-/****
- * const user = require(./User.js)
- * 
- *   Det her samler hele dataen i et objekt
- * const newUser = newUser(
- * firstname: req.body.firstname,
- * email: 
- * )
- */
+// const User = require("../Module/user.js")
+//  import User from "../Modules/user.js"
+
+class User {
+  constructor(fullName, email, signUpPassword, age ){
+      this.fullName = fullName;
+      this.email = email;
+      this.signUpPassword = signUpPassword;
+      this.age = age
+     
+  }
+}
+
 
   function createAccBtn() {
     
@@ -19,6 +23,7 @@
     const Password = document.getElementById("signUpPassword").value;
     const age = document.getElementById("age").value;
   
+    const newUser = new User("joakim", "email", "Password", "age")
 
 //documentation : https://www.w3schools.com/jsref/met_storage_setitem.asp   
     localStorage.setItem("fullName", fname);
@@ -26,7 +31,7 @@
     localStorage.setItem("password", Password);
     localStorage.setItem("age", age);
   
-  //localStorage.setitem("NewUser", newUser);
+    localStorage.setitem("newUser", JSON.stringify (newUser));
   
     e.preventDefault(); //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
 
