@@ -26,7 +26,7 @@
     localStorage.setItem("password", Password);
     localStorage.setItem("age", age);
   
-  //localStorage.setitem("newUser", newUser);
+  //localStorage.setitem("NewUser", newUser);
   
     e.preventDefault(); //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
 
