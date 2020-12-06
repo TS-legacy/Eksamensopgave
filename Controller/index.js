@@ -10,30 +10,38 @@ class User {
       this.fullName = fullName;
       this.email = email;
       this.signUpPassword = signUpPassword;
-      this.age = age
+      this.age = age;
      
   }
 }
 
 
   function createAccBtn() {
-    
+    /*
     const fname = document.getElementById("fullName").value;
     const email = document.getElementById("email").value;
     const Password = document.getElementById("signUpPassword").value;
-    const age = document.getElementById("age").value;
+    const age = document.getElementById("age").value; */
   
-    const newUser = new User("joakim", "email", "Password", "age")
+    const newUser = new User({
+      fullName : document.getElementById("Fullname").value, 
+      email : document.getElementById("email").value,
+      Password : document.getElementById("signUpPassword").value,
+      age : document.getElementById("age").value
+    })
+
+    var user = JSON.stringify(newUser)
 
 //documentation : https://www.w3schools.com/jsref/met_storage_setitem.asp   
+/*
     localStorage.setItem("fullName", fname);
     localStorage.setItem("email", email);
     localStorage.setItem("password", Password);
-    localStorage.setItem("age", age);
+    localStorage.setItem("age", age); */
   
-    localStorage.setitem("newUser", JSON.stringify (newUser));
+    localStorage.setItem("newUser", user);
   
-    e.preventDefault(); //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+    //e.preventDefault(); //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
 
   }
 
