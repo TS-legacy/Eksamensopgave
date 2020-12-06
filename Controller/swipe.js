@@ -3,7 +3,7 @@
 function likeBtn() {
     const matchName = document.getElementById("Selena").value;
 
-    localStorage.setItem("Selena", "Selena");
+    localStorage.setItem("Match", "Selena");
     window.alert("You have matched with Selena. Go to profile page to see your matches")
 
 };
@@ -12,7 +12,7 @@ function likeBtn() {
 //Function that removes the person from the console
 function dislikeBtn() {
    
-    localStorage.removeItem("Selena", "Selena");
+    localStorage.removeItem("Match", "Selena");
 
 }
 
