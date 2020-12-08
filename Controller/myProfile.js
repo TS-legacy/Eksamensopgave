@@ -41,7 +41,7 @@ function deleteUser(){
 }
 
 
-  /**Et get request sendes som forbinder serveren med siden når bruger opretter sig. 
+  /**Et get request sendes som forbinder serveren med siden når bruger ændre sig. 
    * Efter der er kørt node.server.js i consolen så kan localhost:3001 skrives i postman eller føges vi linket*/
   document.addEventListener("DOMContentLoaded", function() {
 
@@ -60,7 +60,7 @@ function deleteUser(){
    });
 
 
-/**Et get request sendes som forbinder serveren med siden når bruger opretter sig. 
+/**Et get request sendes som forbinder serveren med siden når bruger sletter sig. 
    * Efter der er kørt node.server.js i consolen så kan localhost:3002 skrives i postman eller føges vi linket*/
   document.addEventListener("DOMContentLoaded", function() {
 

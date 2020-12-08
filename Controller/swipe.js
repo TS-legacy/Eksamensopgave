@@ -13,7 +13,7 @@ function likeBtn() {
 function dislikeBtn() {
    
     localStorage.removeItem("Match", "Selena");
-
+    window.alert("You have unmatched with Selena")
 }
 
 
